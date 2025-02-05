@@ -1,18 +1,18 @@
 # Smooth Movement with Accelerated Motion and Air Resistance
 
-Implementation of physic model of smooth movement using acceleration, with an upper bound caused by air resistance.
+Implementation of physics model of smooth movement using acceleration, with an upper bound caused by air resistance.
 
 ## Equation
 ```math
 F_o = F - (F_f + F_{ar})
 ```
 where:
+```math
 - \( F_o \) is the output force,
 - \( F \) is the initial force,
 - \( F_f \) is the friction force,
 - \( F_{ar} \) is the additional resistance force.
-
----
+```
 
 The equation for acceleration output is:
 
