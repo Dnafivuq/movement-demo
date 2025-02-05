@@ -4,8 +4,14 @@ from collections import namedtuple
 
 Vector2 = namedtuple('Vector2', ['x', 'y'])
 g = 9.81
-mu = 0.4
+mu = 0.9
 k = 0.01
+
+
+def round_to_zero(value: float, threshold: float = 0.005) -> float:
+    if value**2 < threshold:
+        return 0
+    return value
 
 
 class PhysicalBody:
@@ -25,10 +31,9 @@ class PhysicalBody:
         )
 
         self._velocity = Vector2(
-            self._velocity.x + self._acceleration.x * delta_time,
-            self._velocity.y + self._acceleration.y * delta_time
+            round_to_zero(self._velocity.x + self._acceleration.x * delta_time),
+            round_to_zero(self._velocity.y + self._acceleration.y * delta_time)
         )
-
         self._position = Vector2(
             self._position.x + self._velocity.x * delta_time,
             self._position.y + self._velocity.y * delta_time
