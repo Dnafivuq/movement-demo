@@ -29,10 +29,12 @@ Since $k$ is an air resistance constant for the object, we can absorb $m$ into $
 ```math
 a_o = a - \mu g - k v^2
 ```
+Thus giving the final form of equation.
+
 
 where:  
 - $a_o$ is the output acceleration,
-- $a$ is the initial acceleration,
+- $a$ is the applied force acceleration,
 - $\mu$ is a coefficient friction,
 - $g$ is gravitational acceleration,
 - $k$ is the modified air resistance constant,
