@@ -44,3 +44,19 @@ where:
 ## Repository content
  - Graphs showing the relationship between acceleration, velocity, and distance traveled,
  - Pygame demo of movable object.
+
+## How to run
+
+Prefered python version Python 3.12.3 or newer.
+
+Install  required dependencies and libraries
+
+```bash
+pip install -r requirements.txt 
+```
+
+To run the demo use
+
+```bash
+python3 main.py
+```
