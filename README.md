@@ -45,6 +45,8 @@ where:
  - Graphs showing the relationship between acceleration, velocity, and distance traveled,
  - Pygame demo of movable object.
 
+## Demo keybinds
+Use ```wsad``` for movement, hold ```b``` faster movement (sprint). 
 ## How to run
 
 Prefered python version Python 3.12.3 or newer.
