@@ -4,8 +4,8 @@ from collections import namedtuple
 
 Vector2 = namedtuple('Vector2', ['x', 'y'])
 g = 9.81
-mu = 0.9
-k = 0.01
+mu = 0.6
+k = 0.03
 
 
 def normalize_vector(vector: Vector2) -> Vector2:
@@ -16,6 +16,10 @@ def normalize_vector(vector: Vector2) -> Vector2:
             vector.y / lenght
         )
     return vector
+
+
+def vector_lenght(vector: Vector2) -> float:
+    return np.sqrt(vector.x**2 + vector.y**2)
 
 
 def round_to_zero(vector: Vector2, acceleration: Vector2, threshold: float = 0.005) -> Vector2:
@@ -43,8 +47,8 @@ class PhysicalBody:
     def update(self, applied_force_acceleration: Vector2, delta_time: float) -> None:
 
         self._acceleration = Vector2(
-            applied_force_acceleration.x * self._speed - np.sign(self._velocity.x) * k*self._velocity.x**2,
-            applied_force_acceleration.y * self._speed - np.sign(self._velocity.y) * k*self._velocity.y**2
+            applied_force_acceleration.x * self._speed - k*self._velocity.x*vector_lenght(self._velocity),
+            applied_force_acceleration.y * self._speed - k*self._velocity.y*vector_lenght(self._velocity)
         )
 
         self._velocity = Vector2(

@@ -23,7 +23,7 @@ class SimulationEngine:
         self._input_force = Vector2(0, 0)
         self._clock = pygame.time.Clock()
         self._running = True
-        self._body = PhysicalBody(Vector2(960/2, 720/2), Vector2(30, 30), 10)
+        self._body = PhysicalBody(Vector2(960/2, 720/2), Vector2(50, 50), 15)
         self._keyboard = {
             "w": False,
             "s": False,
