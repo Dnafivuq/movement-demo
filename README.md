@@ -51,7 +51,7 @@ Use ```wsad``` for movement, hold ```b``` for faster movement (sprint).
 
 Prefered python version Python 3.12.3 or newer.
 
-Install all of required dependencies and libraries in this repository run
+To install all of the required dependencies and libraries in this repository run
 
 ```bash
 pip install -r requirements.txt 
