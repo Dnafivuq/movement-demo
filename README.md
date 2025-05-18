@@ -51,12 +51,16 @@ Use ```wsad``` for movement, hold ```b``` for faster movement (sprint).
 
 Prefered python version Python 3.12.3 or newer.
 
-Install  required dependencies and libraries
+Install all of required dependencies and libraries in this repository run
 
 ```bash
 pip install -r requirements.txt 
 ```
+ But since most of dependencies come from juptyter notebook, if you only wish to run demo install demo_reqs.txt instead by runing
 
+```bash
+pip install -r demo_req.txt 
+```
 To run the demo use
 
 ```bash
